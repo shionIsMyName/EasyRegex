@@ -97,19 +97,19 @@
 /**
  *  正则匹配字符长度(出现次数)设置
  */
--(ERMaker*(^)(NSInteger length)) length;
+-(ERMaker*(^)(long length)) length;
 /**
  *  正则匹配字符长度(出现次数)范围设置
  */
--(ERMaker*(^)(NSInteger min,NSInteger max)) lengthRange;
+-(ERMaker*(^)(long min,long max)) lengthRange;
 /**
  *  正则匹配字符长度(出现次数)至少有多少
  */
--(ERMaker*(^)(NSInteger min)) atLest;
+-(ERMaker*(^)(long min)) atLest;
 /**
  *  正则匹配字符长度(出现次数)最多有多少,注意从0开始
  */
--(ERMaker*(^)(NSInteger max)) atMost;
+-(ERMaker*(^)(long max)) atMost;
 
 
 
