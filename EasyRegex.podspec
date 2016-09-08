@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = "1.0.0"
   s.summary          = "一个可提供最便捷的方式生成正则表达式，且包含常用ios应用开发正则的第三方库(Objective-C)。"
   s.description      = <<-DESC
-                       一个可提供最便捷的方式生成正则表达式，且包含常用ios应用开发正则的第三方库(Objective-C)。
+                       一个可提供最便捷的方式生成正则表达式，且包含常用ios应用开发正则的第三方库(Objective-C)，本库将持续更新。
  			DESC
   s.homepage         = "https://github.com/shionIsMyName/EasyRegex"
   # s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
