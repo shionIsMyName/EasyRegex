@@ -107,35 +107,30 @@
 }
 
 
--(ERMaker*(^)(NSInteger length)) length{
-    return ^(NSInteger length){
-        long param = (long)length;
-        [_operatingStr appendString:[NSString stringWithFormat:@"{%ld}",param]];
+-(ERMaker*(^)(long length)) length{
+    return ^(long length){
+        [_operatingStr appendString:[NSString stringWithFormat:@"{%ld}",((long)length)]];
         return self;
     };
 }
 
--(ERMaker*(^)(NSInteger min,NSInteger max)) lengthRange{
-    return ^(NSInteger min,NSInteger max){
-        long paramA = (long) min;
-        long paramB = (long) max;
-        [_operatingStr appendString:[NSString stringWithFormat:@"{%ld,%ld}",paramA,paramB]];
+-(ERMaker*(^)(long min,long max)) lengthRange{
+    return ^(long min,long max){
+        [_operatingStr appendString:[NSString stringWithFormat:@"{%ld,%ld}",((long)min),((long)max)]];
         return self;
     };
 }
 
--(ERMaker*(^)(NSInteger min)) atLest{
-    return ^(NSInteger min){
-        long param = (long) min;
-        [_operatingStr appendString:[NSString stringWithFormat:@"{%ld,}",param]];
+-(ERMaker*(^)(long min)) atLest{
+    return ^(long min){
+        [_operatingStr appendString:[NSString stringWithFormat:@"{%ld,}",((long)min)]];
         return self;
     };
 }
 
--(ERMaker*(^)(NSInteger max)) atMost{
-    return ^(NSInteger max){
-        long param = (long) max;
-        [_operatingStr appendString:[NSString stringWithFormat:@"{0,%ld}",param]];
+-(ERMaker*(^)(long max)) atMost{
+    return ^(long max){
+        [_operatingStr appendString:[NSString stringWithFormat:@"{0,%ld}",((long)max)]];
         return self;
     };
 }
