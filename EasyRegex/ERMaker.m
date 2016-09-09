@@ -109,7 +109,8 @@
 
 -(ERMaker*(^)(NSInteger length)) length{
     return ^(NSInteger length){
-        NSString *str = [NSString stringWithFormat:@"{%ld}",(long)length];
+        long length_long = (long)length;
+        NSString *str = [NSString stringWithFormat:@"{%ld}",length_long];
         [_operatingStr appendString:str];
         return self;
     };
@@ -117,7 +118,9 @@
 
 -(ERMaker*(^)(NSInteger min,NSInteger max)) lengthRange{
     return ^(NSInteger min,NSInteger max){
-        NSString *str = [NSString stringWithFormat:@"{%ld,%ld}",(long)min,(long)max];
+        long min_long = (long) min;
+        long max_long = (long) max;
+        NSString *str = [NSString stringWithFormat:@"{%ld,%ld}",min_long,max_long];
         [_operatingStr appendString:str];
         return self;
     };
@@ -125,7 +128,8 @@
 
 -(ERMaker*(^)(NSInteger min)) atLest{
     return ^(NSInteger min){
-        NSString *str = [NSString stringWithFormat:@"{%ld,}",(long)min];
+        long min_long = (long) min;
+        NSString *str = [NSString stringWithFormat:@"{%ld,}",min_long];
         [_operatingStr appendString:str];
         return self;
     };
@@ -133,7 +137,8 @@
 
 -(ERMaker*(^)(NSInteger max)) atMost{
     return ^(NSInteger max){
-        NSString *str =[NSString stringWithFormat:@"{0,%ld}",max];
+        long max_long = (long) max;
+        NSString *str =[NSString stringWithFormat:@"{0,%ld}",max_long];
         [_operatingStr appendString:str];
         return self;
     };
