@@ -42,8 +42,6 @@
         regex.endAsLastRule();//等于 $
     }];
     
-    NSLog(@"regexStr=>%@",regexStr);
-    
     //参数参数
     BOOL result = [ERManager isMatched:userNameOrPassword regex:regexStr];
     return result;
